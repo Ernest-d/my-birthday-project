@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Zina!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="card" id="card">
+  <div class="card-inner">
+    <!-- front (cover) -->
+    <div class="front">
+      <div class="hover-text">Hover or tap to open</div>
+
+      <div class="cover-shape-large">
+        <div class="shape-diamond">
+          <div class="shape-block">
+          </div>
+        </div>
+      </div>
+
+      <div class="cover-shape-small">
+        <div class="shape-diamond"></div>
+        <div class="shape-block">
+          <div class="cake">
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="icing"></div>
+            <div class="drip drip1"></div>
+            <div class="drip drip2"></div>
+            <div class="drip drip3"></div>
+            <div class="candle">
+              <div class="flame"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- back (inside) -->
+    <div class="back">
+      <div class="text-container">
+        <p id="head">Happy Birthday Zina!</p>
+        <div>You have a way of making everything feel brighter, and honestly... I really like you. I hope your day is as beautiful and special as you are.<br>Enjoy your day and always remember <br><span class="ernest-text">ERNEST LOVES&#128157; YOU!</span></div>
+        <p>Enjoy and have a blast!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Enable tap-to-open on touch devices: toggle .open on the card
+  (function () {
+    var card = document.getElementById('card');
+    if (!card) return;
+    var isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (!isTouch) return; // desktop already works with hover
+    card.addEventListener('click', function (e) {
+      card.classList.toggle('open');
+    });
+  })();
+</script>
+</body>
+</html>
